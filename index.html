@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light">
+<title>An Nhiên Cố Đô — Hương thơm tự nhiên từ Cố Đô Huế</title>
+<meta name="description" content="An Nhiên Cố Đô — nến thơm, tinh dầu và cao tràm thủ công mang dấu ấn Cố Đô Huế.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Inter:wght@400;500;600;700;800&family=Noto+Serif:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+
+<div class="topbar" id="topbar">
+  <div class="topbar-in">
+    <a class="brand" href="#hero" aria-label="An Nhiên Cố Đô — về đầu trang">
+      <span class="brand-name">An Nhiên Cố Đô</span>
+      <span class="brand-tag">Hương Xưa Đất Huế</span>
+    </a>
+    <nav class="mainnav" id="mainNav" aria-label="Điều hướng chính">
+      <a href="#hero">Trang chủ</a>
+      <a href="#bo-suu-tap">Bộ sưu tập</a>
+      <a href="#danh-muc">Danh mục</a>
+      <a href="#cau-chuyen">Câu chuyện</a>
+      <a href="#combo">Combo &amp; quà tặng</a>
+      <a href="#faq">Hỏi đáp</a>
+    </nav>
+    <a class="topbar-phone" href="tel:0374113186">
+      <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg>
+      0374.113.186
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="Mở menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</div>
+
+
+<header class="hero" id="hero">
+  <div class="hero-slides">
+    <div class="hero-slide active" style="background-image:url('assets/images/hero.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('assets/images/featured-gift.jpg')"></div>
+    <div class="hero-slide" style="background-image:url('assets/images/featured-oil.jpg')"></div>
+    <div class="hero-shade"></div>
+  </div>
+
+  <div class="hero-panel">
+    <div class="hero-badge">Hương thơm thủ công — Độc bản từ Cố Đô</div>
+    <p class="hero-brand">An Nhiên Cố Đô xin chào,</p>
+    <p class="hero-welcome">Cảm ơn bạn đã tin chọn chúng mình giữa vô vàn thương hiệu ngoài kia. Chúc bạn cùng gia đình và người thương có thật nhiều phút giây thư giãn bên các sản phẩm hương thơm tự nhiên từ An Nhiên nhé!</p>
+    <div class="hero-cta">
+      <a class="btn btn-accent" href="#bo-suu-tap">Khám phá bộ sưu tập <span class="arr" aria-hidden="true">→</span></a>
+      <a class="btn btn-ghost" href="#cau-chuyen">Câu chuyện thương hiệu</a>
+    </div>
+  </div>
+
+  <button class="hero-arrow prev" id="heroPrev" aria-label="Ảnh trước"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+  <button class="hero-arrow next" id="heroNext" aria-label="Ảnh tiếp theo"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+
+  <button class="music-btn off" id="musicBtn" aria-label="Bật âm thanh thư giãn" aria-pressed="false" title="Bật / tắt âm thanh thư giãn">
+    <img src="assets/images/speaker.png" alt="">
+    <span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span>
+  </button>
+  <button class="sound-status" id="soundStatus" aria-label="Bật hoặc tắt âm thanh thư giãn">
+    <span class="dot-live" aria-hidden="true"></span><span id="soundStatusText">Âm thanh đang tắt — chạm loa để nghe thử</span>
+  </button>
+
+  <div class="hero-dots" id="heroDots">
+    <button class="dot active" data-slide="0" aria-label="Ảnh 1"></button>
+    <button class="dot" data-slide="1" aria-label="Ảnh 2"></button>
+    <button class="dot" data-slide="2" aria-label="Ảnh 3"></button>
+  </div>
+</header>
+
+
+<section class="section promo">
+  <div class="wrap">
+    <div class="promo-banner reveal">
+      <div class="promo-media"><img src="assets/images/combo-2.jpg" alt="Combo 2 — Tri ân thầy cô 20/11"></div>
+      <div class="promo-body">
+        <p class="promo-tag">Ưu đãi đặc biệt dịp 20/11</p>
+        <h2 class="promo-title">Combo Tri ân thầy cô — tặng kèm Cao Tràm &amp; Tinh dầu</h2>
+        <p class="promo-prices"><span class="promo-old">550.000đ</span> <span class="promo-new">436.000đ</span> <span class="promo-off">−21%</span></p>
+        <a class="btn btn-accent" href="#combo">Xem combo <span class="arr" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section alt" id="bo-suu-tap">
+  <div class="wrap">
+    <div class="heading">
+      <p class="eyebrow">Bộ sưu tập</p>
+      <h2>Bộ sưu tập nổi bật</h2>
+      <div class="heading-rule"></div>
+    </div>
+    <div class="featured-grid reveal">
+      <article class="featured-card" data-open-modal="candle" tabindex="0" role="button" aria-label="Xem cốc nến thơm">
+        <div class="featured-media"><img src="assets/images/featured-candle.png" alt="Cốc nến thơm An Nhiên Cố Đô"></div>
+        <div class="featured-body">
+          <h3>Nến thơm</h3>
+          <p>Nến gốm thủ công với các mùi hương Sứ, Sen, Nhài, Quế và Đinh Hương — thắp lên là thấy Cố Đô.</p>
+          <span class="text-link">Xem thêm <span class="arr" aria-hidden="true">→</span></span>
+        </div>
+      </article>
+      <article class="featured-card" data-scroll-to="#combo" tabindex="0" role="button" aria-label="Xem hộp và quà tặng">
+        <div class="featured-media"><img src="assets/images/featured-gift.jpg" alt="Hộp quà sang trọng An Nhiên Cố Đô"></div>
+        <div class="featured-body">
+          <h3>Thiết kế hộp &amp; quà tặng</h3>
+          <p>Những bộ quà chỉn chu với thiệp cảm ơn viết tay — thay bạn gửi lời yêu thương và tri ân.</p>
+          <span class="text-link">Xem thêm <span class="arr" aria-hidden="true">→</span></span>
+        </div>
+      </article>
+      <article class="featured-card" data-open-modal="oil" tabindex="0" role="button" aria-label="Xem tinh dầu">
+        <div class="featured-media"><img src="assets/images/featured-oil.jpg" alt="Tinh dầu Cam An Nhiên Cố Đô"></div>
+        <div class="featured-body">
+          <h3>Tinh dầu</h3>
+          <p>Tinh dầu thiên nhiên cho máy xông và không gian sống — thanh mát, ấm áp theo từng nốt hương.</p>
+          <span class="text-link">Xem thêm <span class="arr" aria-hidden="true">→</span></span>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="danh-muc">
+  <div class="wrap">
+    <div class="heading">
+      <p class="eyebrow">Danh mục</p>
+      <h2>Danh mục sản phẩm</h2>
+      <div class="heading-rule"></div>
+      <p class="heading-sub">Ba dòng sản phẩm thủ công — chọn một mùi hương, mang cả Cố Đô về nhà.</p>
+    </div>
+    <div class="category-grid reveal">
+      <button class="category-card" data-open-modal="candle">
+        <span class="category-img"><img src="assets/images/cat-candle.png" alt="Nến thơm"></span>
+        <span class="category-label">Nến thơm</span>
+        <span class="category-note">Gốm 275 gr, Thủy Tinh 240gr &amp; Thủy Tinh 170gr, năm mùi hương để lựa chọn</span>
+        <span class="text-link">Xem chi tiết <span class="arr" aria-hidden="true">→</span></span>
+      </button>
+      <button class="category-card" data-open-modal="oil">
+        <span class="category-img"><img src="assets/images/cat-oil.png" alt="Tinh dầu"></span>
+        <span class="category-label">Tinh dầu</span>
+        <span class="category-note">Đinh Hương, Tràm, Tùng, Quế và Sả Chanh — chai 50ml | 20ml</span>
+        <span class="text-link">Xem chi tiết <span class="arr" aria-hidden="true">→</span></span>
+      </button>
+      <button class="category-card" data-open-modal="caotram">
+        <span class="category-img"><img src="assets/images/cat-caotram.png" alt="Cao tràm"></span>
+        <span class="category-label">Cao tràm</span>
+        <span class="category-note">Nấu cô đặc từ thảo dược, hũ 30g &amp; 10g tiện mang theo</span>
+        <span class="text-link">Xem chi tiết <span class="arr" aria-hidden="true">→</span></span>
+      </button>
+    </div>
+  </div>
+</section>
+
+
+<section class="section alt" id="cau-chuyen">
+  <div class="wrap">
+    <div class="heading">
+      <p class="eyebrow">Câu chuyện</p>
+      <h2>Câu chuyện thương hiệu</h2>
+      <div class="heading-rule"></div>
+      <p class="heading-sub">Khám phá cách An Nhiên Cố Đô ra đời</p>
+    </div>
+    <div class="panel story-panel reveal">
+      <div class="story-photo-wrap">
+        <img class="story-photo" src="assets/images/story-workshop.png" alt="Xưởng làm nến thủ công An Nhiên Cố Đô">
+      </div>
+      <div class="story-body">
+        <p class="story-kicker">Câu chuyện An Nhiên</p>
+        <h3 class="story-title">Một chút Cố Đô, một khoảng an nhiên</h3>
+        <div class="story-rule"></div>
+
+        <h4>Khởi nguồn</h4>
+        <p>Rời Huế lập nghiệp, nỗi nhớ quê nhà ùa về qua từng mùi hương: tràm cổ kính, sứ thanh tao, quế - đinh hương trầm ấm. Chắt lọc niềm thương ấy, An Nhiên Cố Đô đã ra đời.</p>
+
+        <h4>Dấu ấn Cố Đô</h4>
+        <p>Từng hũ nến thơm, lọ tinh dầu hay cao tràm của An Nhiên Cố Đô đều gom góp chút bình yên xứ Huế, mang dáng hình Cổng Ngọ Môn cùng 8 mùi hương bản địa: Sen, Nhài, Sứ, Bưởi, Chanh Sả, Quế, Tràm, Đinh Hương. Mộc mạc, rất Huế mà cũng rất Việt Nam — tất cả được gói ghém thành món quà gửi những người con xa xứ và bạn bè quốc tế.</p>
+
+        <h4>Điều gửi gắm</h4>
+        <p>Mong rằng chút hương dịu lành từ An Nhiên Cố Đô sẽ sưởi ấm không gian sống, mang lại sự an yên cho tâm hồn bạn và trở thành món quà ý nghĩa gửi trao người thương.</p>
+
+        <a class="btn btn-brown" href="#combo">Khám phá các combo <span class="arr" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="combo">
+  <div class="wrap">
+    <div class="heading">
+      <p class="eyebrow">Quà tặng</p>
+      <h2>Combo và quà tặng</h2>
+      <div class="heading-rule"></div>
+      <p class="heading-sub">Quà tặng tinh tế, gửi trọn tâm tình</p>
+    </div>
+    <div class="panel combo-panel reveal">
+      <div class="combo-tri" role="group" aria-label="Hai combo quà tặng — chạm để xem chi tiết">
+        <button class="combo-tri-item" data-open-modal="combo1" aria-label="Xem chi tiết Combo 1 — Hộp quà sang trọng">
+          <span class="combo-tri-shape"><img class="combo-tri-img--gift" src="assets/images/featured-gift.jpg" alt="Combo 1 — Hộp quà sang trọng An Nhiên Cố Đô"></span>
+        </button>
+        <button class="combo-tri-item" data-open-modal="combo2" aria-label="Xem chi tiết Combo 2 — Tri ân thầy cô 20/11">
+          <span class="combo-tri-shape"><img class="combo-tri-img--candle" src="assets/images/combo-2.jpg" alt="Combo 2 — Nến thơm Tràm tri ân thầy cô 20/11"></span>
+        </button>
+      </div>
+      <div class="combo-body">
+        <h3>Trao hương thơm, gửi lời quan tâm</h3>
+        <p>Những bộ quà kết hợp nến thơm và tinh dầu từ An Nhiên Cố Đô thay bạn gửi lời yêu thương đến người thân, lời tri ân đến thầy cô và những người bạn trân quý.</p>
+        <p>Các combo được giới thiệu quanh năm, cùng ưu đãi vào những dịp đặc biệt như 20/10, 20/11 và 2/9. Khám phá bộ quà phù hợp để mỗi món quà đều mang dấu ấn của sự quan tâm.</p>
+        <p>Dù là quà tặng người thân, lời cảm ơn thầy cô hay món quà cho một dịp đặc biệt, bạn luôn có thể tìm thấy lựa chọn phù hợp trong các combo được giới thiệu quanh năm.</p>
+        <a class="btn btn-navy" href="#cac-combo">Khám phá các combo <span class="arr" aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section alt" id="cac-combo" style="padding-top:0">
+  <div class="wrap">
+    <div class="heading">
+      <p class="eyebrow">Hiện có</p>
+      <h2>Các combo hiện có</h2>
+      <div class="heading-rule"></div>
+    </div>
+    <div class="combo-grid reveal">
+      <article class="combo-card">
+        <img src="assets/images/featured-gift.jpg" alt="Combo 1 — Hộp quà sang trọng">
+        <div class="combo-card-body">
+          <h3>Combo 1 — Hộp quà sang trọng</h3>
+          <p>Cốc nến thơm kèm hộp diêm thủ công, thiệp cảm ơn viết tay và hộp quà trang trí chỉn chu — sẵn sàng để trao tặng.</p>
+          <button class="btn btn-navy" data-open-modal="combo1">Xem chi tiết combo <span class="arr" aria-hidden="true">→</span></button>
+        </div>
+      </article>
+      <article class="combo-card">
+        <img src="assets/images/combo-2.jpg" alt="Combo 2 — Tri ân thầy cô, ưu đãi đặc biệt 20/11">
+        <div class="combo-card-body">
+          <h3>Combo 2 — Tri ân thầy cô 20/11</h3>
+          <p>Ưu đãi đặc biệt dịp 20/11: tặng kèm Cao Tràm và Tinh dầu. Nến thơm cao cấp 550.000đ giảm còn 436.000đ.</p>
+          <button class="btn btn-navy" data-open-modal="combo2">Xem chi tiết combo <span class="arr" aria-hidden="true">→</span></button>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+
+<section class="section" id="faq">
+  <div class="wrap">
+    <div class="heading">
+      <p class="eyebrow">Hỏi đáp</p>
+      <h2>Câu hỏi thường gặp</h2>
+      <div class="heading-rule"></div>
+    </div>
+    <div class="faq-wrap reveal">
+      <div class="faq-left">
+        <h3>Bạn muốn tìm hiểu điều gì?</h3>
+        <ul class="faq-list" id="faqList">
+          <li><button class="faq-q active" data-faq="0"><span class="faq-num">01</span>Làm sao để chọn mùi hương phù hợp? <img class="faq-arrow" src="assets/icons/arrow-next.svg" alt=""></button></li>
+          <li><button class="faq-q" data-faq="1"><span class="faq-num">02</span>Nến thơm có thời gian đốt bao lâu? <img class="faq-arrow" src="assets/icons/arrow-next.svg" alt=""></button></li>
+          <li><button class="faq-q" data-faq="2"><span class="faq-num">03</span>Sử dụng và bảo quản nến thơm như thế nào? <img class="faq-arrow" src="assets/icons/arrow-next.svg" alt=""></button></li>
+          <li><button class="faq-q" data-faq="3"><span class="faq-num">04</span>Tinh dầu được sử dụng như thế nào? <img class="faq-arrow" src="assets/icons/arrow-next.svg" alt=""></button></li>
+          <li><button class="faq-q" data-faq="4"><span class="faq-num">05</span>Tôi có thể chọn sản phẩm để làm quà tặng không? <img class="faq-arrow" src="assets/icons/arrow-next.svg" alt=""></button></li>
+          <li><button class="faq-q" data-faq="5"><span class="faq-num">06</span>Máy xông là sản phẩm đi kèm hay phải mua ngoài? <img class="faq-arrow" src="assets/icons/arrow-next.svg" alt=""></button></li>
+          <li><button class="faq-q" data-faq="6"><span class="faq-num">07</span>Nếu sản phẩm bị hư hỏng khi nhận hàng, tôi cần làm gì? <img class="faq-arrow" src="assets/icons/arrow-next.svg" alt=""></button></li>
+        </ul>
+      </div>
+      <div class="faq-right">
+        <p class="eyebrow">Giải đáp</p>
+        <h3 id="faqAnswerTitle">Làm sao để chọn mùi hương phù hợp</h3>
+        <p id="faqAnswerBody"></p>
+        <div class="faq-contact">Vẫn còn thắc mắc? Gọi <a href="tel:0374113186">0374.113.186</a> hoặc gửi email tới <a href="mailto:annhiencodo@gmail.com">annhiencodo@gmail.com</a> — An Nhiên luôn sẵn lòng tư vấn.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="contact-banner" id="lien-he">
+  <div class="wrap contact-in reveal">
+    <p class="eyebrow">Liên hệ với An Nhiên</p>
+    <h2>Để chúng tôi tư vấn mùi hương<br>dành riêng cho bạn</h2>
+    <p>Kể cho An Nhiên nghe về không gian và người bạn muốn tặng — chúng tôi sẽ gợi ý mùi hương và combo phù hợp nhất.</p>
+    <div class="contact-cta">
+      <a class="btn btn-accent" href="tel:0374113186">Gọi 0374.113.186 <span class="arr" aria-hidden="true">→</span></a>
+      <a class="btn btn-ghost" href="mailto:annhiencodo.mst@gmail.com">Gửi email tư vấn</a>
+    </div>
+  </div>
+</section>
+
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div class="footer-col">
+      <h5>Giới thiệu</h5>
+      <p>An Nhiên Cố Đô là nơi lưu giữ và tôn vinh những giá trị văn hóa truyền thống. Qua từng sản phẩm, chúng tôi mong muốn trao gửi đến bạn một không gian tĩnh lặng, mang lại sự thư thái giữa nhịp sống hiện đại.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Thông tin liên hệ</h5>
+      <p>Địa chỉ: Số 6, Ngách 2/20, Phường Hoàng Liệt, Thành phố Hà Nội, Việt Nam<br>
+      Điện thoại: <a href="tel:0374113186">0374.113.186</a><br>
+      Email: <a href="mailto:annhiencodo@gmail.com">annhiencodo@gmail.com</a></p>
+      <div class="social-row">
+        <a class="social-circle" href="https://www.facebook.com/profile.php?id=61551702510057" aria-label="Facebook"><img src="assets/icons/facebook.svg" alt="Facebook"></a>
+        <a class="social-circle" href="mailto:annhiencodo@gmail.com" aria-label="Email"><img src="assets/icons/mail.svg" alt="Email"></a>
+        <a class="social-zalo" href="https://zalo.me/0867111316" aria-label="Zalo"><img src="assets/images/zalo.png" alt="Zalo"></a>
+      </div>
+    </div>
+    <div class="footer-col">
+      <h5>Về An Nhiên</h5>
+      <p><a href="#cau-chuyen">Tầm nhìn và sứ mệnh</a><br>
+      <a href="#cau-chuyen">Câu chuyện khởi nguồn</a><br>
+      Phiếu chứng nhận thử nghiệm</p>
+      <h5 class="footer-subhead">Liên kết nhanh</h5>
+      <p><a href="#hero">Trang chủ</a><br>
+      <a href="#bo-suu-tap">Sản phẩm của chúng tôi</a><br>
+      <a href="#danh-muc">Danh mục sản phẩm</a></p>
+    </div>
+  </div>
+  <div class="footer-bottom">© <span id="copyrightYear">2026</span> Bản quyền thuộc về <a class="footer-brand-link" href="index.html">An Nhiên Cố Đô</a>. Mọi quyền được bảo lưu.</div>
+</footer>
+
+
+<div class="dock" aria-label="Liên hệ nhanh">
+  <a class="dock-call" href="tel:0374113186" aria-label="Gọi điện"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.6.1.3 0 .7-.2 1l-2.3 2.2z"/></svg></a>
+  <a class="dock-zalo" href="https://zalo.me/0867111316" aria-label="Nhắn Zalo"><img src="assets/images/zalo.png" alt="Zalo"></a>
+  <a class="dock-mail" href="mailto:annhiencodo@gmail.com" aria-label="Gửi email"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg></a>
+  <a class="dock-top" href="#hero" aria-label="Về đầu trang"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg></a>
+</div>
+
+
+<div class="modal-overlay" id="productModal" hidden>
+  <div class="modal product-modal" role="dialog" aria-modal="true" aria-labelledby="pmTitle">
+    <button class="modal-close" data-close aria-label="Đóng"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+    <div class="modal-scroll product-scroll">
+    <img class="pm-photo" id="pmPhoto" src="assets/images/popup-candle-main.jpg" alt="">
+    <div class="pm-body">
+      <p class="pm-kicker">Sản phẩm thủ công</p>
+      <h3 class="pm-title" id="pmTitle"></h3>
+      <p class="pm-sub" id="pmSub"></p>
+      <p class="pm-label">Dung tích</p>
+      <div class="pm-pills" id="pmPills"></div>
+      <p class="pm-label" id="pmThumbsLabel">Các mùi hương khác</p>
+      <div class="pm-thumbs" id="pmThumbs"></div>
+    </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal-overlay" id="comboModal" hidden>
+  <div class="modal combo-modal" role="dialog" aria-modal="true" aria-labelledby="cmTitle">
+    <button class="modal-close" data-close aria-label="Đóng"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.6" stroke-linecap="round" aria-hidden="true"><path d="M5 5l14 14M19 5L5 19"/></svg></button>
+    <div class="modal-scroll combo-scroll">
+    <p class="cm-kicker">An Nhiên Cố Đô</p>
+    <h3 class="cm-title" id="cmTitle">Chi tiết combo</h3>
+    <div class="cm-grid">
+      <img class="cm-photo" id="cmPhoto" src="assets/images/featured-gift.jpg" alt="">
+      <div class="cm-accordions" id="cmAccordions"></div>
+    </div>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
