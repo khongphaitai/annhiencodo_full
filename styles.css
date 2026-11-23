@@ -361,7 +361,7 @@ body.no-scroll{overflow:hidden}
   .footer-grid{grid-template-columns:1fr}
   .hero{min-height:calc(88vh - 76px);min-height:calc(88svh - 76px);align-items:flex-start}
   .hero-panel{background:rgba(30,24,38,.55);padding:40px 22px 30px;margin:64px 0 70px;width:94vw}
-  .hero-badge{font-size:11px;padding:11px 18px;max-width:92vw;white-space:normal;text-align:center;line-height:1.4}
+  .hero-badge{display:none}
   .hero-brand{font-size:34px}
   .hero-welcome{font-size:14.5px;line-height:1.55;margin:12px 0 0}
   .hero-cta{display:none}
