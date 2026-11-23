@@ -174,7 +174,6 @@ a{text-decoration:none;color:inherit}
    bottom band out. Horizontally the gift photo centres on the open gift box;
    the candle poster stays centred on the jar. */
 .combo-tri-img--gift{object-position:8% 0%}
-.combo-tri-img--candle{object-position:50% 0%;height:128%}
 .combo-body h3{font-family:'Noto Serif',serif;font-size:clamp(23px,1.9vw,32px);font-weight:700;color:var(--brown);margin-bottom:18px;line-height:1.3}
 .combo-body p{font-size:16.5px;line-height:1.65;color:var(--muted);margin-bottom:14px}
 .combo-body .btn{margin-top:14px}
@@ -382,19 +381,3 @@ body.no-scroll{overflow:hidden}
   html{scroll-padding-top:84px}
 }
 
-/* ---------- promo banner (uu dai) ---------- */
-.promo{padding-top:0}
-.promo-banner{background:var(--navy);display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);overflow:hidden;box-shadow:var(--shadow)}
-.promo-media{min-height:240px}
-.promo-media img{width:100%;height:100%;object-fit:cover;display:block}
-.promo-body{padding:clamp(24px,3.4vw,44px);display:flex;flex-direction:column;gap:14px;align-items:flex-start;justify-content:center}
-.promo-tag{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--gold)}
-.promo-title{font-size:clamp(22px,2.4vw,34px);font-weight:800;line-height:1.3;color:#fff}
-.promo-prices{display:flex;align-items:baseline;gap:14px;flex-wrap:wrap}
-.promo-old{font-size:18px;color:rgba(255,255,255,.65);text-decoration:line-through}
-.promo-new{font-size:clamp(28px,3vw,40px);font-weight:800;color:var(--gold)}
-.promo-off{background:var(--accent);color:#fff;font-size:13px;font-weight:800;padding:4px 10px;border-radius:999px}
-@media (max-width:760px){
-  .promo-banner{grid-template-columns:1fr}
-  .promo-media{min-height:180px;max-height:220px}
-}
