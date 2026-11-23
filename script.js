@@ -247,65 +247,20 @@ document.getElementById('copyrightYear').textContent = new Date().getFullYear();
 })();
 
 
-/* ---------------- Product popup data ---------------- */
-const PRODUCTS = {
-  candle: {
-    title: 'Nến thơm 8 mùi hương bản địa',
-    sub: 'Cốc nến làm từ gốm và mùi hương Sứ tự nhiên',
-    photo: 'assets/images/popup-candle-main.jpg',
-    pills: ['Gốm 275 gr', 'Thủy Tinh 240gr', 'Thủy Tinh 170gr'],
-    thumbs: [
-      { photo: 'assets/images/popup-candle-main.jpg', title: 'Nến thơm 8 mùi hương bản địa', sub: 'Cốc nến làm từ gốm và mùi hương Sứ tự nhiên' },
-      { photo: 'assets/images/popup-candle-dinhhuong.jpg', title: 'Nến thơm 8 mùi hương bản địa', sub: 'Cốc nến làm từ gốm và mùi hương Đinh Hương tự nhiên' },
-      { photo: 'assets/images/popup-candle-nhai.jpg', title: 'Nến thơm 8 mùi hương bản địa', sub: 'Cốc nến làm từ gốm và mùi hương Nhài tự nhiên' },
-      { photo: 'assets/images/popup-candle-que.jpg', title: 'Nến thơm 8 mùi hương bản địa', sub: 'Cốc nến làm từ gốm và mùi hương Quế tự nhiên' },
-      { photo: 'assets/images/popup-candle-sen.jpg', title: 'Nến thơm 8 mùi hương bản địa', sub: 'Cốc nến làm từ gốm và mùi hương Sen tự nhiên' }
-    ]
-  },
-  oil: {
-    title: 'Tinh dầu thơm Cố Đô',
-    sub: 'Đinh Hương — tinh dầu mùi gỗ quý hiếm.',
-    photo: 'assets/images/popup-oil-main.jpg',
-    pills: ['50ml', '20ml'],
-    thumbs: [
-      { photo: 'assets/images/popup-oil-main.jpg', title: 'Tinh dầu thơm Cố Đô', sub: 'Đinh Hương — tinh dầu mùi gỗ quý hiếm.' },
-      { photo: 'assets/images/popup-oil-tram.jpg', title: 'Tinh dầu thơm Cố Đô', sub: 'Tràm — tinh dầu mùi gỗ ấm áp, thư giãn.' },
-      { photo: 'assets/images/popup-oil-tung.jpg', title: 'Tinh dầu thơm Cố Đô', sub: 'Tùng — tinh dầu mùi gỗ thanh mát, trong lành.' },
-      { photo: 'assets/images/popup-oil-que.jpg', title: 'Tinh dầu thơm Cố Đô', sub: 'Quế — tinh dầu mùi quế cay ấm, đậm hương Cố Đô.' },
-      { photo: 'assets/images/popup-oil-sachanh.jpg', title: 'Tinh dầu thơm Cố Đô', sub: 'Sả Chanh — tinh dầu tươi mát, sảng khoái.' }
-    ]
-  },
-  caotram: {
-    title: 'Cao Tràm Thảo Mộc',
-    sub: 'Cô đặc từ tinh túy tràm Huế và thảo mộc tự nhiên — dịu ấm, lành tính cho những ngày trở gió, tiện mang theo bên mình.',
-    photo: 'assets/images/popup-caotram-30g.png',
-    pills: ['30g', '10g'],
-    pillPhotos: ['assets/images/popup-caotram-30g.png', 'assets/images/popup-caotram-10g.jpg'],
-    thumbs: []
-  }
-};
-
-/* ---------------- Combo popup data ---------------- */
-const COMBOS = {
-  combo1: {
-    photo: 'assets/images/featured-gift.jpg',
-    alt: 'Combo 1 — Hộp quà sang trọng',
-    rows: [
-      { head: 'Cốc nến & hộp diêm thủ công', body: 'Một cốc nến thơm cao cấp của An Nhiên Cố Đô (mùi hương tùy chọn) kèm hộp diêm thủ công, tiện dụng mỗi khi thắp nến.' },
-      { head: 'Thiệp cảm ơn & hướng dẫn sử dụng', body: 'Thiệp cảm ơn viết tay cùng tờ hướng dẫn sử dụng và bảo quản sản phẩm, giúp món quà thêm trọn vẹn và tinh tế.' },
-      { head: 'Hộp & đồ trang trí', body: 'Hộp quà sang trọng, trang trí chỉn chu với hoa khô và phụ kiện mang dấu ấn Cố Đô — sẵn sàng để trao tặng ngay.' }
-    ]
-  },
-  combo2: {
-    photo: 'assets/images/combo-2.jpg',
-    alt: 'Combo 2 — Tri ân thầy cô, ưu đãi đặc biệt 20/11',
-    rows: [
-      { head: 'Cốc nến & hộp diêm thủ công', body: 'Một cốc nến thơm cao cấp của An Nhiên Cố Đô (mùi hương tùy chọn) kèm hộp diêm thủ công, tiện dụng mỗi khi thắp nến.' },
-      { head: 'Thiệp cảm ơn & hướng dẫn sử dụng', body: 'Thiệp cảm ơn viết tay cùng tờ hướng dẫn sử dụng và bảo quản sản phẩm, giúp món quà thêm trọn vẹn và tinh tế.' },
-      { head: 'Quà tặng kèm', body: 'Ưu đãi đặc biệt 20/11: tặng kèm Cao Tràm và Tinh dầu khi mua combo. Nến thơm cao cấp 550.000đ giảm còn 436.000đ.' }
-    ]
-  }
-};
+/* ---------------- Combo cards (tu sinh tu data.js) ---------------- */
+(function () {
+  const grid = document.getElementById('comboGrid');
+  if (!grid || typeof COMBOS === 'undefined') return;
+  Object.keys(COMBOS).forEach(key => {
+    const c = COMBOS[key];
+    const art = document.createElement('article');
+    art.className = 'combo-card';
+    art.innerHTML = '<img src="' + c.photo + '" alt="' + c.alt + '">' +
+      '<div class="combo-card-body"><h3>' + c.cardTitle + '</h3><p>' + c.cardText + '</p>' +
+      '<button class="btn btn-navy" data-open-modal="' + key + '">Xem chi tiết combo <span class="arr" aria-hidden="true">→</span></button></div>';
+    grid.appendChild(art);
+  });
+})();
 
 /* ---------------- Modal helpers ---------------- */
 const productModal = document.getElementById('productModal');
@@ -346,11 +301,21 @@ const pmThumbsLabel = document.getElementById('pmThumbsLabel');
 function openProduct(key) {
   const p = PRODUCTS[key];
   if (!p) return;
-  pmPhoto.src = p.photo;
+  const PLACEHOLDER = 'assets/images/anh-dang-cap-nhat.jpg';
+  let curThumb = 0, curPill = 0;
+  function applyPhoto() {
+    const t = p.thumbs[curThumb];
+    let src;
+    if (t && t.photos) src = t.photos[curPill] || PLACEHOLDER;
+    else if (p.pillPhotos) src = p.pillPhotos[curPill] || PLACEHOLDER;
+    else src = (t && t.photo) || p.photo;
+    pmPhoto.src = src;
+  }
   pmPhoto.alt = p.title;
   pmPhoto.classList.toggle('pm-photo--caotram', key === 'caotram');
   pmTitle.textContent = p.title;
   pmSub.textContent = p.sub;
+  applyPhoto();
 
   pmPills.innerHTML = '';
   p.pills.forEach((label, i) => {
@@ -360,7 +325,8 @@ function openProduct(key) {
     b.addEventListener('click', () => {
       pmPills.querySelectorAll('.pm-pill').forEach(x => x.classList.remove('active'));
       b.classList.add('active');
-      if (p.pillPhotos) { pmPhoto.src = p.pillPhotos[i]; }
+      curPill = i;
+      applyPhoto();
     });
     pmPills.appendChild(b);
   });
@@ -373,10 +339,11 @@ function openProduct(key) {
     img.src = t.photo;
     img.alt = t.title;
     img.addEventListener('click', () => {
-      pmPhoto.src = t.photo;
+      curThumb = i;
       pmPhoto.alt = t.title;
       pmTitle.textContent = t.title;
       pmSub.textContent = t.sub;
+      applyPhoto();
       pmThumbs.querySelectorAll('.pm-thumb').forEach(x => x.classList.remove('active'));
       img.classList.add('active');
     });
@@ -423,7 +390,7 @@ function openCombo(key) {
 document.querySelectorAll('[data-open-modal]').forEach(el => {
   el.addEventListener('click', () => {
     const key = el.dataset.openModal;
-    if (key === 'combo1' || key === 'combo2') openCombo(key);
+    if (typeof COMBOS !== 'undefined' && COMBOS[key]) openCombo(key);
     else openProduct(key);
   });
   if (el.getAttribute('role') === 'button') {
