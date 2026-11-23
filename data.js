@@ -105,7 +105,8 @@ const PRODUCTS = {
         "photos": [
           "",
           "assets/images/popup-candle-buoi-tt240.jpg",
-          "assets/images/popup-candle-buoi-tt170.jpg"
+          "assets/images/popup-candle-buoi-tt170.jpg",
+          "assets/images/popup-candle-buoi-tt275.jpg"
         ]
       },
       {
